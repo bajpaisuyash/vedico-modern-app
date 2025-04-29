@@ -54,7 +54,7 @@ python panchang_fetcher.py
 npm start
 ```
 ## 🖼️ Screenshot
-<img width="1512" alt="Screenshot 2025-04-29 at 9 24 53 PM" src="https://github.com/user-attachments/assets/f7baff84-fa38-4b0b-bd24-022ba87434f5" />
+<img width="1512" alt="Screenshot 2025-04-29 at 9 32 17 PM" src="https://github.com/user-attachments/assets/5cc9ff6a-c9a6-4ea2-9ffa-cd14701a9bab" />
 
 ---
 
