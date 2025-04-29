@@ -1,0 +1,243 @@
+/* Reset + Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e1e;
+  color: #e0c097;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#background-script {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.deva-char {
+  position: absolute;
+  font-family: 'Noto Serif Devanagari', serif;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 2rem;
+  transform: rotate(var(--angle));
+}
+
+/* App container above background */
+#app {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Calendar */
+#calendar {
+  flex: 1 1 600px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  max-width: 700px;
+  min-width: 300px;
+  color: white;
+}
+
+.month-header {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+  color: #cfcfcf;
+}
+
+.day, .blank {
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.blank {
+  background: transparent;
+}
+
+/* To-Do Section */
+#todo {
+  flex: 1 1 300px;
+  max-width: 400px;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #f0f0f0;
+}
+
+#todo h2 {
+  margin-top: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+#task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#task-input input {
+  flex: 1;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+#task-input button {
+  padding: 0.4rem 0.6rem;
+  border: none;
+  background-color: #5a5a5a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#task-list li {
+  background: #2a2a2a;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#task-list li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#task-list li button {
+  background: transparent;
+  color: #ccc;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #bba68c;
+}
+
+footer .source {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.sanskrit-char {
+  position: absolute;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.07);
+  user-select: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 6px;
+  border-radius: 6px;
+}
+
+.task-item span {
+  flex-grow: 1;
+}
+
+.delete-task {
+  background: transparent;
+  color: #ff6b6b;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.calendar-nav select {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.calendar-nav select:focus {
+  outline: none;
+  background-color: #333;
+}
